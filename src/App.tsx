@@ -1,8 +1,11 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
+import Bread from './components/Bread';
+import Veggie from './components/Veggie';
+import Condiment from './components/Condiment';
  
-type Sandwich = {
+export type Sandwich = {
   fBread: String,
   fCheese: String,
   fVeggies: String[],
@@ -46,7 +49,9 @@ const App: React.FC = () => {
   return (
     <>
       <Routes>
-        
+        <Route path='/bread' element={<Bread breadType={breadType} sandwich={sandwich}/>} />
+        <Route path='/veg' element={<Veggie />} />
+        <Route path='/condiment' element={<Condiment />} />
       </Routes>
     </>
   );
