@@ -4,6 +4,9 @@ import { useState } from 'react';
 import Bread from './components/Bread';
 import Veggie from './components/Veggie';
 import Condiment from './components/Condiment';
+import Order from './components/Order';
+import Home from './components/Home';
+import Cheese from './components/Cheese';
  
 export type Sandwich = {
   fBread: String,
@@ -43,15 +46,18 @@ const App: React.FC = () => {
     } else {
       newCondiment = sandwich.fCondiments.filter(sauce => sauce !== condiment);
     }
-    setSandwich({...sandwich, fVeggies: newCondiment});
+    setSandwich({...sandwich, fCondiments: newCondiment});
   }
 
   return (
     <>
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/bread' element={<Bread breadType={breadType} sandwich={sandwich}/>} />
-        <Route path='/veg' element={<Veggie />} />
-        <Route path='/condiment' element={<Condiment />} />
+        <Route path='/cheese' element={<Cheese cheeseType={cheeseType} sandwich={sandwich} />} />
+        <Route path='/veg' element={<Veggie addVeggie={addVeggie} sandwich={sandwich} />} />
+        <Route path='/condiment' element={<Condiment addCondiment={addCondiment} sandwich={sandwich}/>} />
+        <Route path='/order' element={<Order sandwich={sandwich}/>} />
       </Routes>
     </>
   );
