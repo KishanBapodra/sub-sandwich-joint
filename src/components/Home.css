@@ -1,0 +1,30 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(98,12,115);
+    background: radial-gradient(circle, rgba(98,12,115,0.9598039899553571) 0%, rgba(78,23,99,1) 100%); 
+}
+
+.home {
+    font-size: x-large;
+}
+
+.header {
+    margin: 0;
+    padding-bottom: 2em;
+    color: #d9208a;
+}
+
+.btn {
+    background: none;
+    border: 3px #ffd9e5 solid;
+    color: #ffd9e5;
+    border-radius: 50px;
+    font-size: x-large;
+    padding: 1em;
+    cursor: pointer;
+}
