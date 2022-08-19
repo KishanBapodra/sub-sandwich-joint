@@ -16,7 +16,6 @@ const Veggie = ({addVeggie, sandwich}: VeggieProp) => {
     <>
       <div className='veggie container'>
         <List mapItem={veggies} type="Veggies" sandwich={sandwich} func={addVeggie} />
-      </div>
       
       {sandwich.fVeggies.length && (
         <div className='next'>
@@ -25,6 +24,7 @@ const Veggie = ({addVeggie, sandwich}: VeggieProp) => {
           </Link>
         </div>
       )}
+      </div>
     </>
   );
 }

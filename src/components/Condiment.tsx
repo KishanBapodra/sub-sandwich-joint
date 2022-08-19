@@ -16,13 +16,13 @@ const Condiment = ({addCondiment, sandwich}: CondimentProps) => {
     <>
       <div className='condiment container'>
         <List mapItem={condiments} type="Condiments" sandwich={sandwich} func={addCondiment} />
-      </div>
       
         <div className='next'>
             <Link to="/order">
               <button>Order</button>
             </Link>
         </div>
+      </div>
       
     </>
   );

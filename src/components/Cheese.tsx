@@ -16,12 +16,12 @@ const Cheese = ({cheeseType, sandwich}: CheeseProps) => {
     <>
       <div className='cheese container'>
         <List mapItem={cheese} type="Cheese" sandwich={sandwich} func={cheeseType} />
-      </div>
       
-      <div className='next'>
-          <Link to="/veg">
-            <button>Next</button>
-          </Link>
+        <div className='next'>
+            <Link to="/veg">
+              <button>Next</button>
+            </Link>
+        </div>
       </div>
     </>
   );

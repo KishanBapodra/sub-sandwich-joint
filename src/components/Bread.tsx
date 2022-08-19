@@ -16,7 +16,7 @@ const Bread = ({breadType, sandwich}: BreadProps) => {
     <>
       <div className='bread container'>
         <List mapItem={breads} type="Bread" sandwich={sandwich} func={breadType} />
-      </div>
+      
 
       {sandwich.fBread && (
         <div className='next'>
@@ -25,6 +25,7 @@ const Bread = ({breadType, sandwich}: BreadProps) => {
           </Link>
         </div>
       )}
+      </div>
     </>
   )
 }
