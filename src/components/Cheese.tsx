@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sandwich } from '../App';
 import { Link } from 'react-router-dom'
+import List from './List'
 
 type CheeseProps = {
   cheeseType: (cheese: String) => void,
@@ -9,21 +10,12 @@ type CheeseProps = {
 
 const Cheese = ({cheeseType, sandwich}: CheeseProps) => {
 
-  const cheeseT: String[] = ['American', 'Mozarella','Mixed Cheddar']
+  const cheese: String[] = ['American', 'Mozarella','Mixed Cheddar']
 
   return (
     <>
       <div className='cheese container'>
-        <ul>
-          {cheeseT.map(cheese => {
-            let active = sandwich.fCheese === cheese ? 'active' : '';
-            return(
-              <li onClick={() => cheeseType(cheese)}>
-                <span className={active}>{cheese}</span>
-              </li>
-            )
-          })}
-        </ul>
+        <List mapItem={cheese} type="Cheese" sandwich={sandwich} func={cheeseType} />
       </div>
       
       <div className='next'>

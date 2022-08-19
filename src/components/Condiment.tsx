@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sandwich } from '../App';
+import List from './List'
 
 type CondimentProps = {
   addCondiment: (condiment: String) => void,
@@ -14,16 +15,7 @@ const Condiment = ({addCondiment, sandwich}: CondimentProps) => {
   return (
     <>
       <div className='condiment container'>
-        <ul>
-          {condiments.map(condiment => {
-            let active = sandwich.fCondiments.includes(condiment) ? 'active' : '';
-            return(
-              <li onClick={() => addCondiment(condiment)}>
-                <span className={active}>{condiment}</span>
-              </li>
-            )
-          })}
-        </ul>
+        <List mapItem={condiments} type="Condiments" sandwich={sandwich} func={addCondiment} />
       </div>
       
         <div className='next'>

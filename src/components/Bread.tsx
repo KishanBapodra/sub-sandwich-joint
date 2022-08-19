@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sandwich } from '../App';
 import { Link } from 'react-router-dom'
+import List from './List'
 
 type BreadProps = {
   breadType: (bread: String) => void,
@@ -14,17 +15,7 @@ const Bread = ({breadType, sandwich}: BreadProps) => {
   return (
     <>
       <div className='bread container'>
-        <h3>Choose your Bread</h3>
-        <ul>
-          {breads.map(bread => {
-            let active = sandwich.fBread === bread ? 'active' : '';
-            return(
-              <li onClick={()=> breadType(bread)}>
-                <span className={active}>{bread}</span>
-              </li>
-            );
-          })}
-        </ul>
+        <List mapItem={breads} type="Bread" sandwich={sandwich} func={breadType} />
       </div>
 
       {sandwich.fBread && (
