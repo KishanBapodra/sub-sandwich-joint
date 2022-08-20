@@ -10,7 +10,7 @@ type CheeseProps = {
 
 const Cheese = ({cheeseType, sandwich}: CheeseProps) => {
 
-  const cheese: String[] = ['American', 'Mozarella','Mixed Cheddar']
+  const cheese: String[] = ['American Cheese', 'Mozarella Cheese','Mixed Cheddar Cheese']
 
   return (
     <>
