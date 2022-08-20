@@ -1,22 +1,23 @@
 .container {
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(98,12,115);
-    background: radial-gradient(circle, rgba(98,12,115,0.9598039899553571) 0%, rgba(78,23,99,1) 100%); 
-}
-
-.home {
-    font-size: x-large;
 }
 
 .header {
     margin: 0;
-    padding-bottom: 2em;
-    color: #d9208a;
+    padding-bottom: 1.5em;
+    color: #FF4996;
+    font-size: 3.2em;
+    font-weight: 300;
+    color: #FF4996;
+    text-shadow:
+        0 0 7px #e4347d,
+        0 0 21px #b9617a,
+        0 0 42px #000; 
 }
 
 .btn {
