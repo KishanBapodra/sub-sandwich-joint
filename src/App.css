@@ -1,0 +1,4 @@
+.app {
+    background: rgb(98,12,115);
+    background: radial-gradient(circle, rgba(98,12,115,0.9598039899553571) 0%, rgba(78,23,99,1) 100%); 
+}

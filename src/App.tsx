@@ -6,6 +6,8 @@ import Condiment from './components/Condiment';
 import Order from './components/Order';
 import Home from './components/Home';
 import Cheese from './components/Cheese';
+import Nav from './components/Nav';
+import './App.css'
  
 export type Sandwich = {
   fBread: String,
@@ -49,7 +51,8 @@ const App: React.FC = () => {
   }
 
   return (
-    <>
+    <div className='app'>
+      <Nav />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/bread' element={<Bread breadType={breadType} sandwich={sandwich}/>} />
@@ -58,7 +61,7 @@ const App: React.FC = () => {
         <Route path='/condiment' element={<Condiment addCondiment={addCondiment} sandwich={sandwich}/>} />
         <Route path='/order' element={<Order sandwich={sandwich}/>} />
       </Routes>
-    </>
+    </div>
   );
 }
 
