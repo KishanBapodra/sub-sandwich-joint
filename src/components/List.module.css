@@ -1,0 +1,23 @@
+.pageTitle {
+    font-size: 2em;
+    color: #F3F6FB;
+    font-weight: 300;
+    padding-bottom: 0.35em;
+    border-bottom: 2px #752c92 solid;
+}
+
+.list {
+    list-style: none;
+    width: 100%;
+}
+
+.listItem {
+    padding: 0.5em;
+    font-size: 1.3em;
+    font-weight: 200;
+    color: #F3F6FB;
+}
+
+.isActive {
+    font-weight: 700;
+}
