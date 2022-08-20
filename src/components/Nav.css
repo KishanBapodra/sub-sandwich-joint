@@ -1,0 +1,35 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.header-container {
+    width: 60%;
+    border-bottom: 2px #752c92 solid;
+}
+
+.title {
+    margin: 0;
+    padding-bottom: 0.8em;
+    color: #F3F6FB;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 900px) {
+    .header-container {
+        width: 63%;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .header-container {
+        width: 80%;
+    }
+}
