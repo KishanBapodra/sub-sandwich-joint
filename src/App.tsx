@@ -7,7 +7,7 @@ import Order from './components/Order';
 import Home from './components/Home';
 import Cheese from './components/Cheese';
 import Nav from './components/Nav';
-import './App.css'
+import styles from './App.module.css'
  
 export type Sandwich = {
   fBread: String,
@@ -16,10 +16,16 @@ export type Sandwich = {
   fCondiments: String[],
 }
 
+const initialState = {fBread: "", fCheese: "", fVeggies: [], fCondiments: []}
+
 const App: React.FC = () => {
   
-  const [sandwich, setSandwich] = useState<Sandwich>({fBread: "", fCheese: "", fVeggies: [], fCondiments: []});
+  const [sandwich, setSandwich] = useState<Sandwich>(initialState);
   
+  const resetState = () => {
+    setSandwich(initialState);
+  }
+
   const breadType = (bread: String) => {
     setSandwich({...sandwich, fBread: bread});
   }
@@ -51,10 +57,10 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className='app'>
+    <div className={styles.app}>
       <Nav />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home resetState={resetState}/>} />
         <Route path='/bread' element={<Bread breadType={breadType} sandwich={sandwich}/>} />
         <Route path='/cheese' element={<Cheese cheeseType={cheeseType} sandwich={sandwich} />} />
         <Route path='/veg' element={<Veggie addVeggie={addVeggie} sandwich={sandwich} />} />
