@@ -1,0 +1,16 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order {
+    height: 100vh;
+    color: #F3F6FB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

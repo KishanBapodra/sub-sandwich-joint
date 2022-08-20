@@ -2,6 +2,7 @@ import React from 'react';
 import { Sandwich } from '../App';
 import { Link } from 'react-router-dom'
 import List from './List'
+import styles from './Container.module.css'
 
 type CheeseProps = {
   cheeseType: (cheese: String) => void,
@@ -14,7 +15,7 @@ const Cheese = ({cheeseType, sandwich}: CheeseProps) => {
 
   return (
     <>
-      <div className='cheese container'>
+      <div className={styles.container}>
         <List mapItem={cheese} type="Cheese" sandwich={sandwich} func={cheeseType} />
       
         <div className='next'>

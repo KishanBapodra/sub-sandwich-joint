@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sandwich } from '../App';
 import List from './List'
+import styles from './Container.module.css'
 
 type CondimentProps = {
   addCondiment: (condiment: String) => void,
@@ -14,7 +15,7 @@ const Condiment = ({addCondiment, sandwich}: CondimentProps) => {
   
   return (
     <>
-      <div className='condiment container'>
+      <div className={styles.container}>
         <List mapItem={condiments} type="Condiments" sandwich={sandwich} func={addCondiment} />
       
         <div className='next'>
