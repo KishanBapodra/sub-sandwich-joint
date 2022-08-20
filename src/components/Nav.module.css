@@ -10,7 +10,7 @@
     padding-top: 1em;
 }
 
-.header-container {
+.headerContainer {
     width: 60%;
     border-bottom: 2px #752c92 solid;
 }
@@ -23,13 +23,13 @@
 }
 
 @media screen and (min-width: 900px) {
-    .header-container {
+    .headerContainer {
         width: 63%;
     }
 }
 
 @media screen and (min-width: 1300px){
-    .header-container {
+    .headerContainer {
         width: 80%;
     }
 }
