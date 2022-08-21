@@ -1,7 +1,8 @@
 import React from "react"
 
 function SvgSandwich() {
-	return (<svg width="200" height="120" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	return (
+	<svg width="200" height="120" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		 viewBox="0 0 59.5 59.5" xmlSpace="preserve" fill="#F3F6FB" transform="rotate(-5)">
 	<g>
 		<path d="M59.5,31.75c0-1.933-1.942-3.513-5-4.174V24.25c0-0.064-0.005-0.127-0.013-0.196l0.001-0.025
@@ -109,22 +110,23 @@ function SvgSandwich() {
 			c0.085-0.054,0.162-0.117,0.24-0.179c0.046-0.036,0.091-0.072,0.135-0.111c0.082-0.073,0.159-0.148,0.233-0.229
 			c0.023-0.025,0.043-0.052,0.065-0.078c0.158-0.187,0.293-0.39,0.402-0.611c0.004-0.007,0.009-0.014,0.012-0.021
 			c2.086,0.479,3.305,1.444,3.305,2.206C57.5,32.631,55.862,33.795,53.122,34.14z">
-				<animate  	attributeType="XML"
-            				attributeName="fill"
-            				values="#F3F6FB;#F3F6FB;#F3F6FB;#F3F6FB;#620c73;#F3F6FB;#620c73;#F3F6FB"
-            				dur="4s"
-            				repeatCount="2"/>
-			</path>
-		<circle cx="12" cy="38.25" r="1"/>
-		<circle cx="17" cy="40.25" r="1"/>
-		<circle cx="21" cy="38.25" r="1"/>
-		<circle cx="24" cy="40.25" r="1"/>
-		<circle cx="28" cy="38.25" r="1"/>
-		<circle cx="32" cy="40.25" r="1"/>
-		<circle cx="36" cy="37.25" r="1"/>
-		<circle cx="39" cy="40.25" r="1"/>
-		<circle cx="44" cy="38.25" r="1"/>
-		<circle cx="48" cy="39.25" r="1"/>
+			<animate  	
+				attributeType="XML"
+            	attributeName="fill"
+            	values="#F3F6FB;#F3F6FB;#F3F6FB;#F3F6FB;#620c73;#F3F6FB;#620c73;#F3F6FB"
+            	dur="4s"
+            	repeatCount="2"/>
+		</path>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="12" cy="38.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="17" cy="40.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="21" cy="38.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="24" cy="40.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="28" cy="38.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="32" cy="40.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="36" cy="37.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="39" cy="40.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="44" cy="38.25" r="1"/>
+		<circle fillOpacity="60%" fill="#D1D1D1" cx="48" cy="39.25" r="1"/>
 	</g>
 	<g>
 	</g>
