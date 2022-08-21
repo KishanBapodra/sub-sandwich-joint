@@ -17,14 +17,13 @@ const Bread = ({breadType, sandwich}: BreadProps) => {
     <>
       <div className={styles.container}>
         <List mapItem={breads} type="Bread" sandwich={sandwich} func={breadType} />
-        
-      {sandwich.fBread && (
-        <div className='next'>
+
+        <div className={styles.btn}>
           <Link to="/cheese">
-            <button>Next</button>
+            <button className={sandwich.fBread.length !== 0 ? styles.next : styles.hid}>Next</button>
           </Link>
         </div>
-      )}
+
       </div>
     </>
   )

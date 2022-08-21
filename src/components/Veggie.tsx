@@ -18,13 +18,11 @@ const Veggie = ({addVeggie, sandwich}: VeggieProp) => {
       <div className={styles.container}>
         <List mapItem={veggies} type="Veggies" sandwich={sandwich} func={addVeggie} />
       
-      {sandwich.fVeggies.length && (
-        <div className='next'>
+        <div className={styles.btn}>
           <Link to="/condiment">
-            <button>Next</button>
+            <button className={sandwich.fVeggies.length !== 0 ? styles.next : styles.hid}>Next</button>
           </Link>
         </div>
-      )}
       </div>
     </>
   );
