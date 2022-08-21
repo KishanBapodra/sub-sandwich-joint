@@ -19,5 +19,10 @@
 }
 
 .isActive {
-    font-weight: 700;
+    font-weight: 500;
+}
+
+.icon {
+    font-weight: 200;
+    font-size: large;
 }

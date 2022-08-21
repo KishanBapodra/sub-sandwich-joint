@@ -1,6 +1,8 @@
 import React from 'react';
 import { Sandwich } from '../App';
 import styles from './List.module.css'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type ListProps = {
     mapItem: String[],
@@ -18,7 +20,7 @@ const List = ({mapItem, type, sandwich, func}: ListProps) => {
             let active = sandwich.fBread === item || sandwich.fCheese === item || sandwich.fVeggies.includes(item) || sandwich.fCondiments.includes(item) ? true : false;
             return (
                 <li className={styles.listItem} onClick={() => func(item)}>
-                  <span className={active ? styles.isActive : ''}>{item}</span>
+                  {active ? <FontAwesomeIcon className={styles.icon} icon={faChevronRight} /> : null}&ensp;<span className={active ? styles.isActive : ''}>{item}</span>
               </li>
           );
       })}
