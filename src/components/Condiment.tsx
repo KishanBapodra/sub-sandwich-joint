@@ -18,9 +18,9 @@ const Condiment = ({addCondiment, sandwich}: CondimentProps) => {
       <div className={styles.container}>
         <List mapItem={condiments} type="Condiments" sandwich={sandwich} func={addCondiment} />
       
-        <div className='next'>
+        <div className={styles.btn}>
             <Link to="/order">
-              <button>Order</button>
+              <button className={styles.next}>Order</button>
             </Link>
         </div>
       </div>

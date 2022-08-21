@@ -16,9 +16,24 @@
 }
 
 .next {
-    display: block;
+    font-size: large;
+    background: none;
+    border-radius: 50px;
+    padding: 0.8em 2em;
+    color: #F3F6FB;
+    text-decoration: none;
 }
 
 .hid {
     visibility: hidden;
+    font-size: large;
+    background: none;
+    border-radius: 50px;
+    padding: 0.8em 2em;
+    color: #F3F6FB;
+}
+
+.orderBtn {
+    margin-top: 1em;
+    
 }

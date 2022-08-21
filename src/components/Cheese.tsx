@@ -18,9 +18,9 @@ const Cheese = ({cheeseType, sandwich}: CheeseProps) => {
       <div className={styles.container}>
         <List mapItem={cheese} type="Cheese" sandwich={sandwich} func={cheeseType} />
       
-        <div className='next'>
+        <div className={styles.btn}>
             <Link to="/veg">
-              <button>Next</button>
+              <button className={styles.next}>Next</button>
             </Link>
         </div>
       </div>
