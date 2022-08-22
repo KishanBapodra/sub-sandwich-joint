@@ -113,7 +113,7 @@ function SvgSandwich() {
 			<animate  	
 				attributeType="XML"
             	attributeName="fill"
-            	values="#F3F6FB;#F3F6FB;#F3F6FB;#F3F6FB;#620c73;#F3F6FB;#620c73;#F3F6FB"
+            	values="#F3F6FB;#F3F6FB;#F3F6FB;#F3F6FB;#F3F6FB;#620c73;#F3F6FB;#620c73;#F3F6FB"
             	dur="4s"
             	repeatCount="2"/>
 		</path>
