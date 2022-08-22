@@ -17,17 +17,22 @@ const Bread = ({breadType, sandwich}: BreadProps) => {
   return (
     <>
       <motion.div initial={{x:'60vw'}} animate={{x:0}} transition={{duration: 0.25}} className={styles.container}>
+        
         <List mapItem={breads} type="Bread" sandwich={sandwich} func={breadType} />
 
-        <div className={styles.btn}>
+        {sandwich.fBread && <div className={styles.btn}>
           <Link to="/cheese">
-              <motion.button 
+          <motion.button 
+                initial={{x:'-70vw'}}
+                animate={{x:0}}
+                transition={{type: 'spring', stiffness: 75}}
+                whileHover={{scale: 1.1, boxShadow: "0 0 4px #FF4996", textShadow: "0 0 2px #FFF" }}
                 className={sandwich.fBread.length !== 0 ? styles.next : styles.hid}
               >
                 Next
               </motion.button>
           </Link>
-        </div>
+        </div>}
 
       </motion.div>
     </>
