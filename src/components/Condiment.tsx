@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Sandwich } from '../App';
 import List from './List'
 import styles from './Container.module.css'
+import { motion } from 'framer-motion'
 
 type CondimentProps = {
   addCondiment: (condiment: String) => void,
@@ -20,7 +21,12 @@ const Condiment = ({addCondiment, sandwich}: CondimentProps) => {
       
         <div className={styles.btn}>
             <Link to="/order">
-              <button className={styles.next}>Order</button>
+              <motion.button
+                whileHover={{scale: 1.1, boxShadow: "0 0 4px #FF4996", textShadow: "0 0 2px #FFF" }}
+                className={styles.next}
+              >
+                Order
+              </motion.button>
             </Link>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sandwich } from '../App';
 import styles from './Container.module.css'
+import { motion } from 'framer-motion';
 
 const Order = ({sandwich}: {sandwich: Sandwich}) => {
   return (
@@ -11,9 +12,12 @@ const Order = ({sandwich}: {sandwich: Sandwich}) => {
         <p>{sandwich.fVeggies.map(veg => <>{veg} &ensp;</>)}</p> and the following condiments:
         <p>{sandwich.fCondiments.map(condiment => <>{condiment} &ensp;</>)}</p>
         <Link className={styles.orderBtn} to='/'>
-          <button className={styles.next}>
+          <motion.button
+            whileHover={{scale: 1.2, boxShadow: "0 0 10px #FF4996", textShadow: "0 0 2px #FFF" }}
+            className={styles.next}
+          >
             Order another
-          </button>
+          </motion.button>
         </Link>
     </div>
   );
