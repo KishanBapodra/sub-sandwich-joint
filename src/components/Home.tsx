@@ -13,7 +13,7 @@ const Home = ({resetState}: {resetState: () => void}) => {
         WELCOME TO SUBWAY JOINT
       </h2>
       <Link to="/bread">
-        <motion.button whileHover={{scale: 1.05, boxShadow: "0 0 8px #FF4996", textShadow: "0 0 2px #FFF" }} className={styles.btn}>Create your Sandwich</motion.button>
+        <motion.button whileHover={{scale: [1,1.1,1,1.1,1], boxShadow: "0 0 8px #FF4996", textShadow: "0 0 2px #FFF" }} className={styles.btn}>Create your Sandwich</motion.button>
       </Link>
     </motion.div>
   );
