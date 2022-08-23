@@ -25,13 +25,13 @@ const Order = ({sandwich}: {sandwich: Sandwich}) => {
   const childVariant = {
     hidden: (custom: number) => ({
       opacity: 0,
-      x: custom
     }),
     visible: {
       opacity: 1,
       y: '1em',
       x: 0,
       transition: {
+        duration: 0.75,
         delay: 1.25,
         when: "beforeChildren"
       }
@@ -64,18 +64,18 @@ const Order = ({sandwich}: {sandwich: Sandwich}) => {
           <motion.div custom={0} variants={childVariant} initial="hidden" animate="visible" style={{marginTop: '2.2em', textAlign: 'center', fontSize: '1rem', fontWeight: 'normal'}}>
             <h3>You have ordered a Sandwich with: </h3>
             <p>{sandwich.fBread} bread and {sandwich.fCheese}</p>
-            <div style={{display: 'flex', width: '40vw', margin: '0', justifyContent: 'space-around'}}>
+            {/* <div style={{display: 'flex', width: '40vw', margin: '0', justifyContent: 'space-around'}}> */}
 
-              <motion.div custom={'40vw'} variants={childVariant} style={{textAlign: 'left'}}>
-                <h4> containing the below veggies: </h4>
+              <motion.div custom={'40vw'} variants={childVariant} style={{textAlign: 'center'}}>
+                <h4> containing the following veggies: </h4>
                 <p>{sandwich.fVeggies.map(veg => <>{veg} &ensp;</>)}</p>
               </motion.div>
-              <motion.div custom={'-40vw'} variants={childVariant} style={{textAlign: 'right'}}>
-                <h4>and the below condiments: </h4>
+              <motion.div custom={'-40vw'} variants={childVariant} style={{textAlign: 'center'}}>
+                <h4>and the following condiments: </h4>
                 <p>{sandwich.fCondiments.map(condiment => <>{condiment} &ensp;</>)}</p>
               </motion.div>
 
-            </div>
+            {/* </div> */}
           </motion.div>
         </motion.div>
         <Link className={styles.orderBtn} to='/'>
