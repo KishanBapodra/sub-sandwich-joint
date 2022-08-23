@@ -5,15 +5,85 @@ import styles from './Container.module.css'
 import { motion } from 'framer-motion';
 
 const Order = ({sandwich}: {sandwich: Sandwich}) => {
+
+  const parentVariant = {
+    hidden: {
+      x: '100vw'
+    },
+    visible: {
+      x: 0,
+      transtion: {
+        delay: 2,
+        duration: 5,
+        stiffness: 25,
+        type: 'spring',
+        when: "beforeChildren",
+      }
+    }
+  }
+
+  const childVariant = {
+    hidden: (custom: number) => ({
+      opacity: 0,
+      x: custom
+    }),
+    visible: {
+      opacity: 1,
+      y: '1em',
+      x: 0,
+      transition: {
+        delay: 1.25,
+        when: "beforeChildren"
+      }
+    }
+  }
+
+  const btnVariant = {
+    hidden: {
+      y: 2,
+    },
+    visible: {
+      y: 10
+    },
+    hover: {
+      scale: 1.2,
+      boxShadow: "0 0 10px #FF4996",
+      textShadow: "0 0 2px #FFF"
+    }
+  }
+
   return (
     <div className={styles.order}>
-        <h1>Thank you for your order &#128523;</h1>
-        <p>You have ordered a Sandwich with {sandwich.fBread} bread as the base and {sandwich.fCheese} with the following veggies: </p>
-        <p>{sandwich.fVeggies.map(veg => <>{veg} &ensp;</>)}</p> and the following condiments:
-        <p>{sandwich.fCondiments.map(condiment => <>{condiment} &ensp;</>)}</p>
+        <motion.div style={{textAlign: 'center', fontSize: '2.5em', marginTop: '0.67em', marginBottom: '0.67em', marginLeft: '0', marginRight: '0', fontWeight: 'bold'}}
+                    variants={parentVariant}
+                    initial="hidden"
+                    animate="visible"
+        >
+          Thank you for your order &#128523;
+
+          <motion.div custom={0} variants={childVariant} initial="hidden" animate="visible" style={{marginTop: '2.2em', textAlign: 'center', fontSize: '1rem', fontWeight: 'normal'}}>
+            <h3>You have ordered a Sandwich with: </h3>
+            <p>{sandwich.fBread} bread and {sandwich.fCheese}</p>
+            <div style={{display: 'flex', width: '40vw', margin: '0', justifyContent: 'space-around'}}>
+
+              <motion.div custom={'40vw'} variants={childVariant} style={{textAlign: 'left'}}>
+                <h4> containing the below veggies: </h4>
+                <p>{sandwich.fVeggies.map(veg => <>{veg} &ensp;</>)}</p>
+              </motion.div>
+              <motion.div custom={'-40vw'} variants={childVariant} style={{textAlign: 'right'}}>
+                <h4>and the below condiments: </h4>
+                <p>{sandwich.fCondiments.map(condiment => <>{condiment} &ensp;</>)}</p>
+              </motion.div>
+
+            </div>
+          </motion.div>
+        </motion.div>
         <Link className={styles.orderBtn} to='/'>
           <motion.button
-            whileHover={{scale: 1.2, boxShadow: "0 0 10px #FF4996", textShadow: "0 0 2px #FFF" }}
+            variants={btnVariant}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
             className={styles.next}
           >
             Order another
