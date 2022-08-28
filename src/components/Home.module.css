@@ -8,12 +8,12 @@
 }
 
 .header {
-    margin: 0;
-    padding-bottom: 1.5em;
+    margin: 0 0.5em;
+    text-align: center;
+    padding-bottom: 1em;
     color: #FF4996;
-    font-size: 3.2em;
+    font-size: 2.5em;
     font-weight: 300;
-    color: #FF4996;
     text-shadow:
         0 0 7px #e4347d,
         0 0 21px #b9617a,
@@ -28,4 +28,12 @@
     font-size: x-large;
     padding: 1em;
     cursor: pointer;
+}
+
+
+@media only screen and (min-width: 600px)  {   
+    .header {
+        font-size: 3.2em;
+        font-weight: 300;
+    }
 }

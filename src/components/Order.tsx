@@ -32,7 +32,7 @@ const Order = ({sandwich}: {sandwich: Sandwich}) => {
       x: 0,
       transition: {
         duration: 0.75,
-        delay: 1.25,
+        delay: 0.5,
         when: "beforeChildren"
       }
     }
